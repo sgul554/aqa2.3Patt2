@@ -28,8 +28,8 @@ class AuthTest {
         $("[data-test-id=login] input").setValue(registeredUser.getLogin());
         $("[data-test-id=password] input").setValue(registeredUser.getPassword());
         $(".button").click();
-      //  $(withText("Личный кабинет")).shouldBe(Condition.visible);
-        $(withText("Неверно указан логин или пароль")).shouldBe(Condition.visible);
+        $(withText("Личный кабинет")).shouldBe(Condition.visible);
+
     }
 
     @Test
@@ -49,8 +49,8 @@ class AuthTest {
         $("[data-test-id=login] input").setValue(blockedUser.getLogin());
         $("[data-test-id=password] input").setValue(blockedUser.getPassword());
         $(".button").click();
-        //$(withText("Пользователь заблокирован")).shouldBe(Condition.visible);
-        $(withText("Неверно указан логин или пароль")).shouldBe(Condition.visible);
+        $(withText("Пользователь заблокирован")).shouldBe(Condition.visible);
+
     }
 
     @Test
